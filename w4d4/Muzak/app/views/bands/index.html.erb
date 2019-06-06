@@ -1,0 +1,12 @@
+
+<h3>band list</h3>
+
+<ul class="bands">
+<% @bands.each do |band|%>
+    <li><%= band.name %>
+    <ul>
+    <li><a href="<%new_band_album_url(band)%>">add album</a></li>
+    </ul>
+    </li>
+<%end%>
+</ul>

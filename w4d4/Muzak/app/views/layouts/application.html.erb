@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Muzak</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="header">
+    <h1>THIS IS THE MUSIC APP</h1>
+    <div class="state_header">
+      <% if logged_in? %>
+        <h4>welcome, <%=current_user.email%></h4>
+        <form action="<%=session_url%>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <%= auth_token %>
+          <input type="submit" value="sign out">
+        </form>
+      <% else %>
+        
+          <a href = "<%=new_session_url%> ">sign in</a>
+          <a href = "<%= new_user_url%> ">sign up</a>
+        
+      <% end %>
+    </div><!-- state_header -->
+  </div> <!-- end header -->
+
+    <% if flash[:errors] %>
+      <ul>
+        <% flash[:errors].each do |error| %>
+          <li>
+            <%= error %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
