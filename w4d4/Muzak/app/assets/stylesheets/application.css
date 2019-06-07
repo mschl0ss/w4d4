@@ -14,5 +14,6 @@
  *= require_self
  */
 
- @import "template"
- @import "bands"
+ @import "template";
+ 
+ @import "bands";

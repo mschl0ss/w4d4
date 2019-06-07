@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     width: 1000px;
 }
-h1 {
+.header h1 {
     color: white;
     display: inline-block;
     
@@ -41,6 +41,7 @@ h1 {
 .state_header h4 {
     display: inline-block;
     margin: 0px 15px;
+    color: white;
 }
 
 .state_header form { display: inline-block;}

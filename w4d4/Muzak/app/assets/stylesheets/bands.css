@@ -1,0 +1,26 @@
+
+
+.bands.list {
+    border: solid 1px black;
+    width: 90%;
+    padding: 10px;
+}
+
+.bands.list>li {
+    border: dashed 1px darkslateblue;
+    margin: 15px 0;
+    list-style: none;
+}
+
+.bands.list>li>ul {
+    list-style: none;
+    padding-left: 15px;
+}
+.bands.list>li>ul a{
+    text-decoration:none;
+    color: darkslateblue;
+}
+
+.bands.list>li>ul a:hover{
+    text-decoration: underline;
+}
